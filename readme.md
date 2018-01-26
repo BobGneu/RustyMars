@@ -7,7 +7,7 @@ Please forward all bugs to the [issues listing].
 
 ## Known Issues
 
-Exposing Functions is currently not working, but may be addressed with updating to a later build of V8. You can contribute to the discussion on this topic here: https://groups.google.com/forum/#!topic/v8-users/cYkuljdJEJ8
+Please consult the issues tracker for information about, or to report, bugs.
 
 ## Contact 
 
