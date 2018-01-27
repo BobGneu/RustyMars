@@ -1,3 +1,7 @@
+const VERSION: &'static str = env!("CARGO_PKG_VERSION");
+
+use menu::*;
+
 pub struct Game {
     pub started: bool, 
     pub sent_colonists: bool, 
