@@ -1,24 +1,27 @@
 use game::Game;
-use std::io::{self, Read};
+use std::io::{self, Write};
+
+const VERSION: &'static str = env!("CARGO_PKG_VERSION");
 
 pub fn main_menu_prompt() -> char {
-    println!("Welcome to RustyMars
-    
-Begin by creating a new game:
-    
+    print!("Welcome to RustyMars v{}
+
     N) Create new game
     L) Load game
     Q) Quit game
     
-    >");
+", VERSION);
 
-    get_input(false).remove(0)
+    get_input("> ", false).remove(0)
 }
 
-fn get_input(allow_empty: bool) -> String {
+fn get_input(prompt: &str, allow_empty: bool) -> String {
     let mut buffer = String::new();
 
     loop {
+        print!("{}", prompt);
+        io::stdout().flush().unwrap();
+
         io::stdin().read_line(&mut buffer);
         buffer = buffer.trim().to_owned();
 

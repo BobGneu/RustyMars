@@ -20,6 +20,10 @@ fn main() {
         } else if choice == 'l' {
             // list options
             // game_instance = Game::load(pathToSave)
+        } else {
+            println!("
+## Invalid choice. Please try again.
+");
         }
 
         game_instance.run_loop();
