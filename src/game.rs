@@ -62,8 +62,7 @@ impl Game {
 
     fn print_header(&self) {
         println!(
-            "RustyMars >>> {}
-        Population: {}\t\tFunds: ${}",
+            "RustyMars >>> {}\n\tPopulation: {}\t\tFunds: ${}",
             self.colony.name, self.colony.population, self.earth.funds
         );
     }
