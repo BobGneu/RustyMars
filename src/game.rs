@@ -40,7 +40,32 @@ impl Game {
         self.turn_counter += 1;
     }
 
-    pub fn run_loop(&self) {}
+    pub fn run_loop(&self) {
+        let mut choice: char;
+
+
+        loop {
+            self.print_header();
+
+            choice = get_input(" > ", false).remove(0);
+
+            match choice {
+                'q' => {
+                    break;
+                }
+
+                _ => {}
+            }
+        }
+    }
 
     pub fn report_results(&self) {}
+
+    fn print_header(&self) {
+        println!(
+            "RustyMars >>> {}
+        Population: {}\t\tFunds: ${}",
+            self.colony.name, self.colony.population, self.earth.funds
+        );
+    }
 }
