@@ -1,8 +1,8 @@
 mod game;
 mod menu;
 
-use game::{Game};
-use menu::{main_menu_prompt};
+use game::Game;
+use menu::main_menu_prompt;
 
 fn main() {
     let mut choice: char;
@@ -21,9 +21,11 @@ fn main() {
             // list options
             // game_instance = Game::load(pathToSave)
         } else {
-            println!("
+            println!(
+                "
 ## Invalid choice. Please try again.
-");
+"
+            );
         }
 
         game_instance.run_loop();
