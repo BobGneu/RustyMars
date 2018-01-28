@@ -43,7 +43,6 @@ impl Game {
     pub fn run_loop(&self) {
         let mut choice: char;
 
-
         loop {
             self.print_header();
 
