@@ -1,3 +1,5 @@
+extern crate human_format;
+
 mod game;
 mod menu;
 
